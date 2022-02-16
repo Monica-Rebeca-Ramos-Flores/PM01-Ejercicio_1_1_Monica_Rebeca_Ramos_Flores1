@@ -19,7 +19,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         txtRespuesta = (TextView)findViewById(R.id.txtRespuesta);
 
-        String dato = getIntent().getStringExtra( "dato");
+        String dato = getIntent().getStringExtra( "putresultado");
         txtRespuesta.setText("El resultado es " + dato);
 
     }

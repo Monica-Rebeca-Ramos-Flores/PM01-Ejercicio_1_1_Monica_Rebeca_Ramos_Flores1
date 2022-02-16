@@ -19,22 +19,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-		
+
 		num1 = (EditText) findViewById(R.id.txtPrimero);
 		num2 = (EditText) findViewById(R.id.txtSegundo);
 		Suma = (Button) findViewById(R.id.btnSuma);
 		Resta = (Button) findViewById(R.id.btnResta);
 		Division = (Button) findViewById(R.id.btnDivision);
 		Multiplicacion = (Button) findViewById(R.id.btnMultiplicacion);
+
+		Integer nu1, nu2, respuesta;
+		nu1 = Integer.valueOf(num1.getText().toString());
+		nu2 = Integer.valueOf(num2.getText().toString());
+
+		Intent i = new Intent(this, MainActivity2.class);
+		i.putExtra("putresultado", resultado+" ");
+		startActivity(i);*/
+
     }
 
 	// Metodo para encontrar la suma de los numeros
-	public void Sumar(View view){
-		int n1 = Integer.parseInt(num1.getText().toString());
-		int n2 = Integer.parseInt(num2.getText().toString());
-		int Suma = n1+n2;
-		result(Suma);
-	}
 
 	// Metodo para encontrar la resta de los numeros
 	public void Restar(View view){
@@ -69,4 +72,5 @@ public class MainActivity extends AppCompatActivity {
 		i.putExtra("dato", valor);
 		startActivity(i);
 	}
+
 }
